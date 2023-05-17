@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokemons</title>
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class=" d-flex align-items-center justify-content-center my-3">
+            <img class="header-bg-img" src="./images/Pokemon-Logo-Transparent-Images.png" height="200" alt="Pokemons">
+        </div>
+        <div class="row">
+            <form class="js-pokemon-form d-flex justify-content-between my-3">
+                <div class="input-group mx-3">
+                    <input class="js-pokemon-search-input form-control" placeholder="type..." type="search">
+                    <button class="btn btn-primary">Search</button>
+                </div>
+                <select class="js-pokemon-select form-select form-select " name="Select-type">
+                    <option class="js-option" value="select-type" selected hidden>Select type</option>
+                    <option value="select-type">None</option>
+                </select>
+                <select class="js-pokemon-sort w-25 ms-3 form-control" name="Select-type">
+                    <option class="sort-option" value="select-type"disabled selected hidden>Sort by</option>
+                    <option class="sort_a-z" value="A-Z">A-Z ↓</option>
+                    <option class="sort_z-a" value="Z-A">Z-A ↑</option>
+                </select>
+            </form>
+
+        </div>
+
+        <ul class="js-pokemon-list row mt-3">
+            <img class="loader" src="./images/loading.svg" alt="">
+        </ul>
+    </div>
+
+
+
+
+
+    <template class="js-pokemon-temp">
+        <li class="js-pokemon-item col-12 col-sm-4 col-md-4 col-lg-3 mb-3">
+            <div class="js-pokemon-box pokemon-box  p-3 rounded">
+                <h3 class="js-pokemon-title text-black pokemon-title"><strong>Bulbasaur</strong></h3>
+                <span class="js-pokemon-num badge bg-success pokemon-num">001</span>
+                <img class="js-pokemon-img" src="http://www.serebii.net/pokemongo/pokemon/001.png" width="300" height="300">
+                <div class="d-flex align-items-center justify-content-between">
+                    <p class="js-pokemon-type">Grass, Poison</p>
+                    <time class="js-pokemon-time" datetime="20:00">20:00</time>
+
+                </div>
+                <div class="d-grid">
+                    <button class="js-more-btn btn btn-primary">More info</button>
+                </div>
+            </div>
+        </li>
+    </template>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+    <script src="./js/pokemons.js"></script>
+    <script src="./js/app.js"></script>
+</body>
+</html>
